@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== SEO ===== -->
+<title>El Cuchinero | Cocina casera española explicada de verdad</title>
+<meta name="description" content="Cocina casera española explicada de verdad. No solo recetas: el porqué de que tus platos no salgan como deberían. Cocina de cuchara, recetas de bar y tradición asturiana, con criterio.">
+<meta name="keywords" content="cocina casera española, recetas españolas, cocina de cuchara, recetas de bar, cocina asturiana, El Cuchinero">
+<link rel="canonical" href="https://elcuchinero.es/">
+<meta name="theme-color" content="#111111">
+<link rel="icon" type="image/png" href="el-cuchinero-logo.png">
+<link rel="apple-touch-icon" href="el-cuchinero-logo.png">
+
+<!-- ===== Open Graph / Twitter ===== -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="El Cuchinero">
+<meta property="og:title" content="El Cuchinero | Cocina casera española explicada de verdad">
+<meta property="og:description" content="No te enseño recetas. Te explico por qué no te salen como deberían. Cocina de cuchara, recetas de bar y tradición, con criterio.">
+<meta property="og:url" content="https://elcuchinero.es/">
+<meta property="og:image" content="https://elcuchinero.es/el-cuchinero-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El Cuchinero | Cocina casera española explicada de verdad">
+<meta name="twitter:description" content="No te enseño recetas. Te explico por qué no te salen como deberían.">
+<meta name="twitter:image" content="https://elcuchinero.es/el-cuchinero-og.png">
+
+<!-- ===== Datos estructurados ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "El Cuchinero",
+  "description": "Cocina casera española explicada de verdad: el porqué detrás de cada plato. Cocina de cuchara, recetas de bar y tradición asturiana.",
+  "url": "https://elcuchinero.es/",
+  "logo": "https://elcuchinero.es/el-cuchinero-logo.png",
+  "knowsAbout": ["Cocina casera española", "Cocina de cuchara", "Recetas de bar", "Cocina asturiana"],
+  "sameAs": ["https://www.youtube.com/@ElCuchinero"]
+}
+</script>
+
+<!-- ===== Tipografía ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-blanco-roto:#FFF7EF;
+    --bg-beige-legumbre:#E8CFA9;
+    --text-negro-contorno:#111111;
+    --accent-rojo-vivo:#D92E55;
+    --accent-rojo-profundo:#8F2E1E;
+    --accent-pimenton:#B94A24;
+    --bg-rosa-pastel:#F3A3A3;
+    --text-salmon:#F7B7AE;
+    --gris-texto:#4A423B;
+    --linea:rgba(17,17,17,0.14);
+    --radio:3px;
+    --sombra:0 2px 0 rgba(17,17,17,0.9);
+    --sombra-card:6px 6px 0 rgba(17,17,17,0.9);
+    --max:1120px;
+    --display:'Barlow Condensed',Impact,sans-serif;
+    --texto:'Inter',system-ui,sans-serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+  body{
+    background:var(--bg-blanco-roto);
+    color:var(--text-negro-contorno);
+    font-family:var(--texto);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  a{color:var(--accent-rojo-vivo);text-decoration:none}
+  img{display:block;max-width:100%}
+
+  h1,h2,h3{
+    font-family:var(--display);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:.95;
+    letter-spacing:.005em;
+  }
+
+  .eyebrow{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:1rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent-pimenton);
+  }
+
+  :focus-visible{outline:3px solid var(--accent-rojo-vivo);outline-offset:2px}
+
+  /* ===== Botones ===== */
+  .btn{
+    display:inline-block;
+    font-family:var(--display);
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:14px 30px 15px;
+    border-radius:var(--radio);
+    border:2px solid var(--text-negro-contorno);
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .btn-rojo{
+    background:var(--accent-rojo-vivo);
+    color:var(--bg-blanco-roto);
+    box-shadow:var(--sombra-card);
+  }
+  .btn-rojo:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(17,17,17,0.9)}
+  .btn-linea{
+    background:transparent;
+    color:var(--text-negro-contorno);
+  }
+  .btn-linea:hover{background:var(--text-negro-contorno);color:var(--bg-blanco-roto)}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:30;
+    background:var(--bg-blanco-roto);
+    border-bottom:2px solid var(--text-negro-contorno);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;color:var(--text-negro-contorno)}
+  .brand img{width:40px;height:40px}
+  .brand b{font-family:var(--display);font-weight:800;font-size:1.5rem;letter-spacing:.03em;text-transform:uppercase}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a{
+    font-family:var(--display);font-weight:700;font-size:1.05rem;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--text-negro-contorno);
+  }
+  .nav-links a:hover{color:var(--accent-rojo-vivo)}
+  .nav-links a.nav-cta{
+    background:var(--accent-rojo-vivo);color:var(--bg-blanco-roto);
+    padding:8px 18px 9px;border-radius:var(--radio);
+    border:2px solid var(--text-negro-contorno);
+  }
+  .nav-links a.nav-cta:hover{background:var(--accent-rojo-profundo);color:var(--bg-blanco-roto)}
+
+  /* ===== Hero — Kubrick one-point ===== */
+  .hero{padding:80px 0 70px;text-align:center}
+  .hero .eyebrow{display:block;margin-bottom:26px}
+  .hero h1{
+    font-size:clamp(3rem,9vw,6.8rem);
+    max-width:1000px;margin:0 auto;
+  }
+  .hero h1 .rojo{color:var(--accent-rojo-vivo)}
+  .hero h1 .sub{
+    display:block;
+    font-size:clamp(1.6rem,4.4vw,3.2rem);
+    font-weight:700;
+    color:var(--gris-texto);
+    margin-top:14px;
+  }
+  .hero p.bajada{
+    max-width:560px;margin:28px auto 0;
+    font-size:1.1rem;color:var(--gris-texto);
+  }
+  .hero .cta-row{margin-top:38px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .hero-figure{
+    margin:64px auto 0;
+    max-width:920px;
+    border:2px solid var(--text-negro-contorno);
+    border-radius:var(--radio);
+    box-shadow:var(--sombra-card);
+    overflow:hidden;
+    background:var(--text-negro-contorno);
+  }
+  .hero-figure img{width:100%;transition:transform 1.2s ease-out}
+  .hero-figure:hover img{transform:scale(1.03)}
+  .hero .prueba{
+    margin-top:22px;
+    font-family:var(--display);font-weight:700;font-size:1.05rem;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--gris-texto);
+  }
+  .hero .prueba b{color:var(--accent-rojo-vivo)}
+
+  /* ===== Banda de causa ===== */
+  .banda{
+    background:var(--accent-rojo-profundo);
+    border-top:2px solid var(--text-negro-contorno);
+    border-bottom:2px solid var(--text-negro-contorno);
+    padding:22px 0;
+    overflow:hidden;
+  }
+  .banda p{
+    font-family:var(--display);font-weight:800;
+    font-size:clamp(1.3rem,3vw,2rem);
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--text-salmon);
+    text-align:center;
+  }
+  .banda p b{color:var(--bg-blanco-roto);font-weight:800}
+
+  /* ===== Secciones ===== */
+  .sec{padding:90px 0}
+  .sec-head{text-align:center;max-width:760px;margin:0 auto 56px}
+  .sec-head .eyebrow{display:block;margin-bottom:16px}
+  .sec-head h2{font-size:clamp(2.2rem,5.5vw,3.8rem)}
+  .sec-head p{margin-top:18px;color:var(--gris-texto);font-size:1.08rem}
+
+  /* El Sistema */
+  .sistema-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border:2px solid var(--text-negro-contorno);
+    border-radius:var(--radio);
+    overflow:hidden;
+    background:var(--text-negro-contorno);
+    gap:2px;
+  }
+  .paso{
+    background:var(--bg-blanco-roto);
+    padding:36px 30px 40px;
+    text-align:center;
+  }
+  .paso .num{
+    font-family:var(--display);font-weight:800;font-size:3rem;
+    color:var(--accent-rojo-vivo);line-height:1;
+  }
+  .paso h3{font-size:1.5rem;margin:14px 0 10px}
+  .paso p{color:var(--gris-texto);font-size:.98rem}
+
+  /* Silos */
+  .silos{background:var(--bg-beige-legumbre);border-top:2px solid var(--text-negro-contorno);border-bottom:2px solid var(--text-negro-contorno)}
+  .silos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .card{
+    background:var(--bg-blanco-roto);
+    border:2px solid var(--text-negro-contorno);
+    border-radius:var(--radio);
+    box-shadow:var(--sombra-card);
+    display:flex;flex-direction:column;
+    overflow:hidden;
+  }
+  .card.oscura{background:#F1E4D0}
+  .card .visual{
+    height:120px;
+    border-bottom:2px solid var(--text-negro-contorno);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-weight:800;
+    font-size:1.4rem;letter-spacing:.06em;text-transform:uppercase;
+    overflow:hidden;position:relative;
+  }
+  .card .visual span{position:relative;z-index:1;padding:0 16px;text-align:center}
+  .v-receta{background:var(--accent-rojo-vivo);color:var(--bg-blanco-roto)}
+  .v-bar{background:var(--text-negro-contorno);color:var(--text-salmon)}
+  .v-astur{background:var(--accent-pimenton);color:var(--bg-blanco-roto)}
+  .card .cuerpo{padding:26px 26px 30px;display:flex;flex-direction:column;flex:1}
+  .card h3{font-size:1.6rem;margin-bottom:10px}
+  .card p{color:var(--gris-texto);font-size:.98rem;flex:1}
+  .card .cta{
+    margin-top:22px;
+    font-family:var(--display);font-weight:700;font-size:1.1rem;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent-rojo-vivo);
+    border-bottom:2px solid var(--accent-rojo-vivo);
+    align-self:flex-start;
+    padding-bottom:2px;
+  }
+  .card .cta:hover{color:var(--accent-rojo-profundo);border-color:var(--accent-rojo-profundo)}
+
+  /* Nostalgia — Wes Anderson */
+  .nostalgia{background:var(--bg-rosa-pastel)}
+  .nostalgia .sec-head h2{color:var(--text-negro-contorno)}
+  .nostalgia .sec-head p{color:#5A3230}
+  .nost-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:880px;margin:0 auto}
+  .nost-card{
+    background:var(--bg-blanco-roto);
+    border:2px solid var(--text-negro-contorno);
+    border-radius:var(--radio);
+    padding:34px 32px 36px;
+    text-align:center;
+    box-shadow:var(--sombra-card);
+  }
+  .nost-card .año{
+    display:inline-block;
+    font-family:var(--display);font-weight:800;font-size:.95rem;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:var(--bg-blanco-roto);background:var(--accent-pimenton);
+    border:2px solid var(--text-negro-contorno);
+    border-radius:var(--radio);
+    padding:4px 12px 5px;
+    margin-bottom:16px;
+  }
+  .nost-card h3{font-size:1.7rem;margin-bottom:10px}
+  .nost-card p{color:var(--gris-texto);font-size:.98rem}
+  .nostalgia .cierre{
+    text-align:center;margin-top:48px;
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(1.2rem,2.6vw,1.6rem);
+    letter-spacing:.04em;text-transform:uppercase;
+    color:var(--accent-rojo-profundo);
+  }
+
+  /* Canal — oscuro */
+  .canal{
+    background:var(--text-negro-contorno);
+    color:var(--bg-blanco-roto);
+    border-top:2px solid var(--text-negro-contorno);
+  }
+  .canal-row{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+  .canal .eyebrow{color:var(--text-salmon);display:block;margin-bottom:16px}
+  .canal h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--bg-blanco-roto)}
+  .canal p{color:var(--text-salmon);margin-top:18px;font-size:1.06rem;max-width:540px}
+  .canal a.inline{
+    color:var(--bg-blanco-roto);
+    border-bottom:2px solid var(--accent-rojo-vivo);
+    padding-bottom:1px;
+  }
+  .canal a.inline:hover{color:var(--text-salmon)}
+  .canal .cta-row{margin-top:32px}
+  .canal .btn-rojo{box-shadow:6px 6px 0 rgba(217,46,85,0.35)}
+  .canal .btn-rojo:hover{box-shadow:2px 2px 0 rgba(217,46,85,0.35)}
+  .datos{border:2px solid var(--bg-blanco-roto);border-radius:var(--radio);overflow:hidden}
+  .dato{
+    padding:28px 30px;
+    border-bottom:2px solid rgba(255,247,239,.25);
+    text-align:center;
+  }
+  .dato:last-child{border-bottom:0}
+  .dato .n{font-family:var(--display);font-weight:800;font-size:2.6rem;color:var(--accent-rojo-vivo);line-height:1}
+  .dato .l{font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-salmon);margin-top:8px}
+
+  /* Contacto */
+  .contacto{background:var(--bg-beige-legumbre);border-top:2px solid var(--text-negro-contorno)}
+  .contacto .sec-head{margin-bottom:44px}
+  form{
+    max-width:620px;margin:0 auto;
+    background:var(--bg-blanco-roto);
+    border:2px solid var(--text-negro-contorno);
+    border-radius:var(--radio);
+    box-shadow:var(--sombra-card);
+    padding:42px 40px 46px;
+  }
+  .campo{margin-bottom:22px}
+  .campo label{
+    display:block;
+    font-family:var(--display);font-weight:700;font-size:1rem;
+    letter-spacing:.1em;text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  input,select,textarea{
+    width:100%;
+    background:var(--bg-blanco-roto);
+    border:2px solid var(--text-negro-contorno);
+    border-radius:var(--radio);
+    font-family:var(--texto);font-size:1rem;
+    color:var(--text-negro-contorno);
+    padding:12px 14px;
+  }
+  input::placeholder,textarea::placeholder{color:#9A8E80}
+  input:focus,select:focus,textarea:focus{
+    outline:none;
+    border-color:var(--accent-rojo-vivo);
+    box-shadow:3px 3px 0 rgba(217,46,85,.35);
+  }
+  textarea{resize:vertical;min-height:130px}
+  select{
+    appearance:none;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23111111' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 14px center;
+  }
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  button.enviar{
+    width:100%;cursor:pointer;
+    background:var(--accent-rojo-vivo);color:var(--bg-blanco-roto);
+    font-family:var(--display);font-weight:800;font-size:1.3rem;
+    letter-spacing:.08em;text-transform:uppercase;
+    border:2px solid var(--text-negro-contorno);
+    border-radius:var(--radio);
+    padding:15px;
+    box-shadow:var(--sombra-card);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  button.enviar:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(17,17,17,0.9)}
+  button.enviar:disabled{opacity:.65;cursor:wait;transform:none}
+  .status{margin-top:16px;font-weight:600;min-height:1.4em;text-align:center}
+  .status.ok{color:var(--accent-rojo-profundo)}
+  .status.err{color:var(--accent-rojo-vivo)}
+
+  /* ===== Footer con coda ===== */
+  footer{
+    background:var(--text-negro-contorno);
+    color:var(--bg-blanco-roto);
+    padding:90px 0 50px;
+    text-align:center;
+  }
+  .coda{
+    font-family:var(--display);font-weight:800;
+    font-size:clamp(2.2rem,7vw,5.2rem);
+    line-height:1;text-transform:uppercase;
+    max-width:960px;margin:0 auto;
+  }
+  .coda .rojo{color:var(--accent-rojo-vivo)}
+  .foot-nav{
+    margin-top:54px;
+    display:flex;gap:30px;justify-content:center;flex-wrap:wrap;
+  }
+  .foot-nav a{
+    font-family:var(--display);font-weight:700;font-size:1.05rem;
+    letter-spacing:.1em;text-transform:uppercase;
+    color:var(--text-salmon);
+  }
+  .foot-nav a:hover{color:var(--bg-blanco-roto)}
+  .foot-brand{
+    margin-top:46px;display:flex;flex-direction:column;align-items:center;gap:12px;
+  }
+  .foot-brand img{width:52px;height:52px}
+  .foot-brand span{
+    font-family:var(--display);font-weight:700;font-size:.95rem;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:rgba(255,247,239,.5);
+  }
+  .copy{margin-top:30px;font-size:.82rem;color:rgba(255,247,239,.4)}
+
+  /* ===== Responsive ===== */
+  @media (max-width:900px){
+    .sistema-grid{grid-template-columns:1fr}
+    .silos-grid{grid-template-columns:1fr}
+    .nost-grid{grid-template-columns:1fr}
+    .canal-row{grid-template-columns:1fr;gap:40px}
+  }
+  @media (max-width:640px){
+    .nav-links a:not(.nav-cta){display:none}
+    .hero{padding:56px 0 50px}
+    .sec{padding:64px 0}
+    form{padding:30px 22px 34px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">
+      <img src="el-cuchinero-logo.png" alt="El Cuchinero" width="40" height="40">
+      <b>El Cuchinero</b>
+    </a>
+    <nav class="nav-links">
+      <a href="#sistema">El sistema</a>
+      <a href="#canal">El canal</a>
+      <a href="#contacto">Contacto</a>
+      <a class="nav-cta" href="https://www.youtube.com/@ElCuchinero" target="_blank" rel="noopener">YouTube</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Recetas · Cultura de bar · Recuerdos</span>
+    <h1>
+      No te enseño recetas.<br>
+      <span class="rojo">Te explico por qué no te salen</span>
+      <span class="sub">como deberían.</span>
+    </h1>
+    <p class="bajada">Cocina casera española explicada de verdad. Cocina de cuchara, recetas de bar y tradición asturiana. Con criterio y sin atajos.</p>
+    <div class="cta-row">
+      <a class="btn btn-rojo" href="https://www.youtube.com/@ElCuchinero" target="_blank" rel="noopener">Entiende por qué</a>
+      <a class="btn btn-linea" href="#contacto">Hablamos</a>
+    </div>
+    <figure class="hero-figure">
+      <img src="el-cuchinero-og.png" alt="Platos de cocina casera española de El Cuchinero: fabada, tortilla, ensaladilla, croquetas y cocina de cuchara" width="1280" height="720">
+    </figure>
+    <p class="prueba"><b>+110.000 personas</b> ya cocinan con criterio</p>
+  </div>
+</section>
+
+<!-- ===== BANDA DE CAUSA ===== -->
+<div class="banda">
+  <div class="wrap">
+    <p>No falla aquí. <b>Falla antes.</b></p>
+  </div>
+</div>
+
+<!-- ===== EL SISTEMA ===== -->
+<section class="sec" id="sistema">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El sistema</span>
+      <h2>Cada plato que falla tiene una causa</h2>
+      <p>Las lentejas no quedan aguadas por el chorizo. Quedan aguadas porque el sofrito no redujo lo suficiente. Todo tiene un porqué. Este es el método para encontrarlo.</p>
+    </div>
+    <div class="sistema-grid">
+      <div class="paso">
+        <div class="num">1</div>
+        <h3>El síntoma</h3>
+        <p>La ensaladilla de casa no sabe como la del bar. La mayonesa se corta. El pescaíto chupa aceite. Eso no es mala suerte: es un dato.</p>
+      </div>
+      <div class="paso">
+        <div class="num">2</div>
+        <h3>La causa</h3>
+        <p>Temperatura, orden, tiempo, reposo. El error casi nunca está donde lo ves. Está dos pasos antes, y tiene explicación física.</p>
+      </div>
+      <div class="paso">
+        <div class="num">3</div>
+        <h3>El criterio</h3>
+        <p>Cuando entiendes el mecanismo, dejas de copiar recetas. Aquí se separa quien cocina de memoria de quien cocina con criterio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SILOS ===== -->
+<section class="sec silos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Qué vas a encontrar</span>
+      <h2>Tres territorios, una regla: el orden importa</h2>
+    </div>
+    <div class="silos-grid">
+      <article class="card">
+        <div class="visual v-receta"><span>Por qué pasa esto</span></div>
+        <div class="cuerpo">
+          <h3>Recetas que funcionan</h3>
+          <p>El error invisible que arruina el plato, explicado con su causa exacta. Sin trucos de feria: física de cocina de la de siempre.</p>
+          <a class="cta" href="https://www.youtube.com/@ElCuchinero" target="_blank" rel="noopener">Descubre el error</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="visual v-bar"><span>Cultura de bar</span></div>
+        <div class="cuerpo">
+          <h3>El bar en casa</h3>
+          <p>Ese sabor de barra que en casa nunca sale. La ensaladilla, el pescaíto, las bravas. Aquí sale. Y sabes por qué sale.</p>
+          <a class="cta" href="https://www.youtube.com/@ElCuchinero" target="_blank" rel="noopener">Ver la causa</a>
+        </div>
+      </article>
+      <article class="card oscura">
+        <div class="visual v-astur"><span>Cuchara honesta</span></div>
+        <div class="cuerpo">
+          <h3>Cocina asturiana</h3>
+          <p>Fabada, pote, callos, croquetas. Cocina de cuchara y tradición: la que se hace despacio y se defiende sola en la mesa.</p>
+          <a class="cta" href="https://www.youtube.com/@ElCuchinero" target="_blank" rel="noopener">Entiende por qué</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOSTALGIA 80/90 ===== -->
+<section class="sec nostalgia">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Historias ocultas</span>
+      <h2>La comida que sabía a recreo</h2>
+      <p>Las marcas que crecieron contigo y la comida de los 80 y 90: la que sabía a verano, a kiosco y a bocadillo en la playa.</p>
+    </div>
+    <div class="nost-grid">
+      <article class="nost-card">
+        <span class="año">Guerra de marcas</span>
+        <h3>ColaCao contra Nesquik</h3>
+        <p>Dos polvos de cacao, dos Españas en el desayuno. La historia de cómo una lata amarilla se metió en tu cocina y no salió.</p>
+      </article>
+      <article class="nost-card">
+        <span class="año">Años 80/90</span>
+        <h3>El bocadillo de la playa</h3>
+        <p>Tortilla envuelta en papel de plata, arena en el filete empanado y la nevera de camping. Nada volvió a saber igual. Hay motivo.</p>
+      </article>
+    </div>
+    <p class="cierre">Revive el momento →</p>
+  </div>
+</section>
+
+<!-- ===== EL CANAL ===== -->
+<section class="sec canal" id="canal">
+  <div class="wrap canal-row">
+    <div>
+      <span class="eyebrow">El canal</span>
+      <h2>Cocina casera española en YouTube</h2>
+      <p>Trucos, errores y los detalles que separan un plato bien hecho de uno corriente. Fabada, pote, tortilla de patata, ensaladilla rusa y la razón física detrás de cada paso.</p>
+      <p>Todo está en <a class="inline" href="https://www.youtube.com/@ElCuchinero" target="_blank" rel="noopener">el canal de El Cuchinero en YouTube</a>. Si te interesa entender la cocina, no solo copiarla, llegas a buen sitio.</p>
+      <div class="cta-row">
+        <a class="btn btn-rojo" href="https://www.youtube.com/@ElCuchinero" target="_blank" rel="noopener">Suscríbete al canal</a>
+      </div>
+    </div>
+    <div class="datos">
+      <div class="dato"><div class="n">+110.000</div><div class="l">suscriptores</div></div>
+      <div class="dato"><div class="n">+140</div><div class="l">vídeos publicados</div></div>
+      <div class="dato"><div class="n">1</div><div class="l">regla: el porqué</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="sec contacto" id="contacto">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Contacto</span>
+      <h2>¿Hablamos?</h2>
+      <p>Una colaboración, una marca, una propuesta de medios. O una receta que se te resiste. Escríbeme y te respondo.</p>
+    </div>
+    <form id="form" action="https://formspree.io/f/xjgqpzgq" method="POST">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Cómo te llamas" required>
+      </div>
+      <div class="campo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+      </div>
+      <div class="campo">
+        <label for="asunto">Motivo</label>
+        <select id="asunto" name="asunto">
+          <option>Colaboración</option>
+          <option>Marca / publicidad</option>
+          <option>Prensa / medios</option>
+          <option>Una receta que se me resiste</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Cuéntame" required></textarea>
+      </div>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="enviar" type="submit">Enviar</button>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER / CODA ===== -->
+<footer>
+  <div class="wrap">
+    <p class="coda">La cocina no se improvisa.<br><span class="rojo">Y cuando la entiendes, tampoco necesitas.</span></p>
+    <nav class="foot-nav">
+      <a href="https://www.youtube.com/@ElCuchinero" target="_blank" rel="noopener">YouTube</a>
+      <a href="#sistema">El sistema</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="foot-brand">
+      <img src="el-cuchinero-logo.png" alt="El Cuchinero" width="52" height="52">
+      <span>Recetas · Cultura de bar · Recuerdos</span>
+    </div>
+    <p class="copy">© 2026 El Cuchinero · Cocina casera española</p>
+  </div>
+</footer>
+
+<script>
+  // Envío del formulario sin salir de la página (Formspree AJAX)
+  (function(){
+    var form = document.getElementById('form');
+    var status = document.getElementById('status');
+    var btn = form.querySelector('button.enviar');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      status.className = 'status';
+      status.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(r){
+        if(r.ok){
+          form.reset();
+          status.className = 'status ok';
+          status.textContent = 'Recibido. Te respondo pronto.';
+        } else {
+          status.className = 'status err';
+          status.textContent = 'Algo ha fallado. Prueba de nuevo o escribe por YouTube.';
+        }
+      }).catch(function(){
+        status.className = 'status err';
+        status.textContent = 'Sin conexión. Inténtalo en un momento.';
+      }).finally(function(){
+        btn.disabled = false;
+        btn.textContent = 'Enviar';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
